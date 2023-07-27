@@ -10,7 +10,7 @@ namespace crudSample
     {
         public BasicAuthenticationHandler(
             IOptionsMonitor<AuthenticationSchemeOptions> options,
-            ILoggerFactory logger,
+            ILoggerFactory logger, 
             UrlEncoder encoder,
             ISystemClock clock
             ) : base(options, logger, encoder, clock)

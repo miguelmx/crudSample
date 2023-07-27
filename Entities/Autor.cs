@@ -8,6 +8,6 @@ namespace crudSample.Entities
         [Required]
         public string Nombre { get; set; }
         [Required]
-        public List<Libro> Libros { get; set; }
+        public List<Libro> Libros { get; set; } 
     }
 }

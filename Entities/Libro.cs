@@ -5,7 +5,7 @@ namespace crudSample.Entities
     public class Libro
     {
         public int Id { get; set; }
-        [Required]
+        [Required] 
         public string Titulo { get; set; }
         [Required]
         public int AutorId { get; set; }

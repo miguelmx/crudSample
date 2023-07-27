@@ -8,7 +8,6 @@ namespace crudSample.Data
 
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
-
         }
         public DbSet<Autor> Autor { get; set; }
         public DbSet<Libro> Libro { get; set; }

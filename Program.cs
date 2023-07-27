@@ -27,7 +27,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1", new OpenApiInfo { 
     Title = "crudSample", 
-    Version = "v1"
+    Version = "v1",
     Description = "Una pequeña prueba de concepto utilizando las clases Autor y Libro para desmostrar la creacion de una api rest con algunos endpoints que incluya autenticacion basica utilizando Microsoft.AspNetCore.Authentication con un usuario estatico utilizando el decordor [Authorize] en los endpoints que lo requieran e informacion para generar documentacion para Swagger (incluido en el proyecto) para pruebas de los endpoints.",
     Contact = new OpenApiContact
     {
