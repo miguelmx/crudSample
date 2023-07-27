@@ -19,11 +19,6 @@ builder.Services.AddAuthorization();
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
-
-
-//builder.Services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
-
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1", new OpenApiInfo { 
     Title = "crudSample", 
@@ -33,11 +28,6 @@ builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1", new OpenApiIn
     {
         Name = "Miguel Angel Heredia (desarrollador)",
         Url = new Uri("https://example.com/contact")
-    },
-    License = new OpenApiLicense
-    {
-        Name = "Example License",
-        Url = new Uri("https://example.com/license")
     }
 }));
 

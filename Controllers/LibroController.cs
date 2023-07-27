@@ -38,9 +38,18 @@ namespace crudSample.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] Libro libro)
         {
-            context.Libro.Add(libro);
-            context.SaveChanges();
-            return new CreatedAtRouteResult("ObtenerLibro", new { id = libro.Id }, libro);
+            try
+            {
+                context.Libro.Add(libro);
+                context.SaveChanges();
+                return new CreatedAtRouteResult("ObtenerLibro", new { id = libro.Id }, libro);
+            }
+            catch (Exception e )
+            {
+                throw new ApplicationException("Error: " + e.Message.ToString());
+            }
+            
+            
         }
 
         [HttpPut("{id}")]
