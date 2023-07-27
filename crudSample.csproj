@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageProjectUrl></PackageProjectUrl>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <DocumentationFile>bin\Debug\Net6.0\crudSample.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

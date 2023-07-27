@@ -13,3 +13,5 @@
 * Ejecuta la aplicacion
 
 Para mas informacion de las entidades y los endpoints, la aplicacion contiene una instancia de Swagger que te proporcionara informacion de las entidades, endpoints, sus parametros y respuestas esperadas
+
+Para los endpoints con autenticacion, el usuario es *admin* y el password *admin*

@@ -20,16 +20,21 @@ builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
 builder.Services.AddControllers();
-builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1", new OpenApiInfo { 
-    Title = "crudSample", 
-    Version = "v1",
-    Description = "Una pequeña prueba de concepto utilizando las clases Autor y Libro para desmostrar la creacion de una api rest con algunos endpoints que incluya autenticacion basica utilizando Microsoft.AspNetCore.Authentication con un usuario estatico utilizando el decordor [Authorize] en los endpoints que lo requieran e informacion para generar documentacion para Swagger (incluido en el proyecto) para pruebas de los endpoints.",
-    Contact = new OpenApiContact
+builder.Services.AddSwaggerGen(options => {
+    var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+    options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Name = "Miguel Angel Heredia (desarrollador)",
-        Url = new Uri("https://github.com/miguelmx/crudSample")
-    }
-}));
+        Title = "crudSample",
+        Version = "v1",
+        Description = "Una pequeña prueba de concepto utilizando las clases Autor y Libro para desmostrar la creacion de una api rest con algunos endpoints que incluya autenticacion basica utilizando Microsoft.AspNetCore.Authentication con un usuario estatico utilizando el decordor [Authorize] en los endpoints que lo requieran e informacion para generar documentacion para Swagger (incluido en el proyecto) para pruebas de los endpoints.",
+        Contact = new OpenApiContact
+        {
+            Name = "Miguel Angel Heredia (desarrollador)",
+            Url = new Uri("https://github.com/miguelmx/crudSample")
+        }
+    });
+});
 
 var app = builder.Build();
 
