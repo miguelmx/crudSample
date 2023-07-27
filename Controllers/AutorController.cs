@@ -18,6 +18,11 @@ namespace crudSample.Controllers
             this.context = context; 
         }
 
+        /// <summary>
+        /// Obtiene un listado de todos los autores
+        /// </summary>
+        /// <param name="id">Si especificas el parametro Id, te traera informacion unicamente del autor correspondiente a ese id</param>
+        /// <returns>Devuelve una estructura json con todos los elementos encontrados</returns>
         [HttpGet]
         public ActionResult<IEnumerable<Autor>> Get()
         {

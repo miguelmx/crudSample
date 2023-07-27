@@ -27,7 +27,7 @@ builder.Services.AddSwaggerGen(options => options.SwaggerDoc("v1", new OpenApiIn
     Contact = new OpenApiContact
     {
         Name = "Miguel Angel Heredia (desarrollador)",
-        Url = new Uri("https://example.com/contact")
+        Url = new Uri("https://github.com/miguelmx/crudSample")
     }
 }));
 
